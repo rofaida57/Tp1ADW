@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student List</h2>
+    <table id="demo">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+            </tr>
+        </thead>
+        <tbody>
+         
+    </table>
+    
+    <script>
+        const students = [
+            { name: "rofaida", id: 1 },
+            { name: "ahmed", id: 2 },
+            { name: "wiso", id: 3 }
+        ];
+        
+        let tableContent = "";
+        
+        for (let student of students) {
+            tableContent += "<tr>";
+            tableContent += `<td>${student.name}</td>`;
+            tableContent += `<td>${student.id}</td>`;
+            tableContent += "</tr>";
+        }
+        
+       
+        document.querySelector("#demo tbody").innerHTML = tableContent;
+    </script>
+</body>
+</html>
